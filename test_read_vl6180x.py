@@ -17,7 +17,7 @@ while True:
     print("Lux: " + lux)
 
     range = vl.read_range()
-    status = vl.readRangeStatus()
+    status = vl.read_range_status()
 
     if status == vl6180x.VL6180X_ERROR_NONE:
         print("Range: " + range)

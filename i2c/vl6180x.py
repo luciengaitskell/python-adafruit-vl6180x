@@ -124,7 +124,7 @@ class VL6180X(object):
 
         return range
 
-    def readRangeStatus(self):
+    def read_range_status(self):
         return self.b.read_byte_data(self._addr, VL6180X_REG_RESULT_RANGE_STATUS) >> 4
 
 
