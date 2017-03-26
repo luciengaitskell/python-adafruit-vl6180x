@@ -50,7 +50,7 @@ class VL6180X(object):
 
         self.loadSettings()
 
-        self.b.write_byte_data(VL6180X_REG_SYSTEM_FRESH_OUT_OF_RESET, 0x00)
+        self.b.write_byte_data(self._addr, VL6180X_REG_SYSTEM_FRESH_OUT_OF_RESET, 0x00)
 
         return True
 
