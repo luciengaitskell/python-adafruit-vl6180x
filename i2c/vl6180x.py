@@ -106,7 +106,7 @@ class VL6180X(object):
         self.b.write_byte_data(self._addr, 0x0014, 0x24)  # Configures interrupt on 'New Sample Ready threshold event'
 
 
-    def readRange(self):
+    def read_range(self):
         # wait for device to be ready for range measurement
         while not (self.b.read_byte_data(self._addr, VL6180X_REG_RESULT_RANGE_STATUS) & 0x01): pass
 
