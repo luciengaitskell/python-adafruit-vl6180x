@@ -48,13 +48,13 @@ class VL6180X(object):
         if self.b.read_byte_data(self._addr, VL6180X_REG_IDENTIFICATION_MODEL_ID) != 0xB4:
             return False
 
-        self.loadSettings()
+        self.load_settings()
 
         self.b.write_byte_data(self._addr, VL6180X_REG_SYSTEM_FRESH_OUT_OF_RESET, 0x00)
 
         return True
 
-    def loadSettings(self):
+    def load_settings(self):
         # private settings from page 24 of app note
         self.b.write_byte_data(self._addr, 0x0207, 0x01)
         self.b.write_byte_data(self._addr, 0x0208, 0x01)
