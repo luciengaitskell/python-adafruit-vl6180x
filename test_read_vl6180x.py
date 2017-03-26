@@ -6,7 +6,7 @@ vl = vl6180x.VL6180X()
 
 print("Test and setup the sensor!")
 if not vl.setup():
-    print("Faled to find sensor")
+    print("Failed to find sensor")
     while True:
         pass
 
