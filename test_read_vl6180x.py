@@ -12,7 +12,7 @@ if not vl.setup():
 
 
 while True:
-    lux = vl.readLux(vl6180x.VL6180X_ALS_GAIN_5)
+    lux = vl.read_lux(vl6180x.VL6180X_ALS_GAIN_5)
 
     print("Lux: " + lux)
 

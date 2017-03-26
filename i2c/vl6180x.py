@@ -128,7 +128,7 @@ class VL6180X(object):
         return self.b.read_byte_data(self._addr, VL6180X_REG_RESULT_RANGE_STATUS) >> 4
 
 
-    def readLux(self, gain):
+    def read_lux(self, gain):
         reg = self.b.read_byte_data(self._addr, VL6180X_REG_SYSTEM_INTERRUPT_CONFIG)
         reg &= ~0x38
         reg |= (0x4 << 3)  # IRQ on ALS ready
